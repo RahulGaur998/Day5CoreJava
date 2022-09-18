@@ -12,7 +12,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         int choice;
         logger.info("Welcome to Day5Core programs: Choose a program :");
-        logger.info("1: Harmonic Number 2: Swap 2 numbers ");
+        logger.info("1: Harmonic Number 2: Swap 2 numbers 3: Sum of Triplets is zero ");
         choice = sc.nextInt();
         switch (choice) {
             case 1:
@@ -24,6 +24,12 @@ public class App {
             case 2:
                 SwapNumbers s = new SwapNumbers();
                 s.SwapTwoNumbers();
+                break;
+            case 3:
+                int arr[] = { 0, -1, 2, -3, 1 };
+                int n = arr.length;
+                TripletsWithSumZero t = new TripletsWithSumZero();
+                t.findTriplets(arr, n);
                 break;
             default:
                 logger.info("Bad input");
