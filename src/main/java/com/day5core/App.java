@@ -12,7 +12,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         int choice;
         logger.info("Welcome to Day5Core programs: Choose a program :");
-        logger.info("1: Harmonic Number ");
+        logger.info("1: Harmonic Number 2: Swap 2 numbers ");
         choice = sc.nextInt();
         switch (choice) {
             case 1:
@@ -20,6 +20,10 @@ public class App {
                 int N = sc.nextInt();
                 Harmonic h = new Harmonic();
                 logger.info("Harmonic Number: " + h.nthHarmonic(N));
+                break;
+            case 2:
+                SwapNumbers s = new SwapNumbers();
+                s.SwapTwoNumbers();
                 break;
             default:
                 logger.info("Bad input");
